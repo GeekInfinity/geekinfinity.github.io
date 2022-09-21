@@ -7,7 +7,7 @@
   <meta name="description" content="Portfólio de estudante em engenharia informática e desenvolvedor full-stack de aplicações web e mobile">
   <meta name="keywords" content="development, desenvolvimento, developer, densenvolvedor, programmer, programador, software, programa, web, site, wordpress, mobile, celular, designer, design, ui, ux, project, projeto, windows, linux, macos, android, ios">
   <title>Geek Infinity - Software Engineer & Full-Stack Developer</title>
-  <link id="colors" href="../components/dark/css/colors.css" rel="stylesheet" type="text/css"/>
+  <link id="colors" href="../components/dark/css/dark.css" rel="stylesheet" type="text/css"/>
   <link id="theme" href="../components/dark/css/theme.css" rel="stylesheet" type="text/css"/>
   <link href="../components/dark/css/responsive.css" rel="stylesheet" type="text/css">
   <link href="../components/dark/css/hamburger.css" rel="stylesheet" type="text/css">
@@ -16,7 +16,7 @@
   <link id="terminal" href="../components/dark/css/terminal.css" rel="stylesheet" type="text/css">
   <link href="../components/dark/scss/laptop.css" rel="stylesheet" type="text/css">
   <link id="grid" href="../components/dark/css/grid.css" rel="stylesheet" type="text/css">
-  <link id="tools" href="../components/dark/css/tools.css" rel="stylesheet" type="text/css">
+  <link id="tools" href="../components/dark/css/dark-swt.css" rel="stylesheet" type="text/css">
   <link rel='stylesheet' href="https://css.gg/css">
   <link rel="icon" href="../favicon.png" type="image/gif">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
@@ -25,13 +25,24 @@
   <header>
     <div class="webHeader">
       <div class="headerLogo">
-        <a href="../index.html">
-          <img class="logo" src="../assets/img/Infinity Logo/4x/Asset 1xxxhdpi.png" alt="Geek Infinity Logo" width="70px">
-          <h2>Geek Infinity</h2>
+        <a class="logo" href="../index.html">
+          GEEK INFINITY
+          <!--<img class="logo" src="../assets/img/Infinity Logo/3x/Asset 1xxhdpi.png" alt="Geek Infinity Logo" width="70px"> -->
         </a>
       </div>
       <div class="headerButton">
-        <a href="#contact">DIGA OLÁ</a>
+        <a class="helloBtn" href="#contact">DIGA OLÁ</a>
+        <div class="tools">
+          <div class="language">
+            <a class="langagueBtn" href="../en">EN</a>
+          </div>
+          <div id="dark" onclick="dark()" class="themeButton">
+            <i class="gg-linear"></i>
+          </div>
+          <div id="light" onclick="light()" class="themeButton">
+            <i class="gg-live-photo"></i>
+          </div>
+        </div>
       </div>
     </div>
     <div class="mobileHeader">
@@ -60,28 +71,22 @@
         </nav>
       </div>
     </div>
-    <div class="tools">
-      <div class="languageButton">
-        <a href="../en">EN</a>
-      </div>
-      <a id="dark" onclick="dark()" class="themeButton">
-        <i class="gg-moon"></i>
-      </a>
-      <a id="light" onclick="light()" class="themeButton">
-        <i class="gg-sun"></i>
-      </a>
-    </div>
+    
   </header>
   <main>
-    <div class="mainTitle">
-      <h1>Software Engineer & Full-Stack Developer</h1>
-    </div>
-    <div class="mainSubTitle">
-      <h2>Como transformo <del>Problemas</del> em <u>Conhecimento</u></h2>
-      <a href="#about">MAIS</a>
-    </div>
-    <div class="mainImg">
-      <img src="../assets/img/undraw_programming_re_kg9v.svg" alt="" width="60%">
+    <div id="topPage">
+      <div class="mainContent">
+        <div class="mainTitle">
+          <h1>Looking For Inspiration</h1>
+        </div>
+        <div class="mainSubTitle">
+          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus odit nihil ullam nesciunt quidem iste, Repellendus odit nihil</h2>
+          <a class="moreBtn" href="#about">MAIS</a>
+        </div>
+      </div>
+      <div class="mainImg">
+        <img src="../assets/img/undraw_programming_re_kg9v.svg" alt="" width="75%">
+      </div>
     </div>
     <div id="about">
       <div class="aboutContent">

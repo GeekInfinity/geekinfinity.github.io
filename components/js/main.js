@@ -1,21 +1,15 @@
 /* Theme */
 function dark() {
   localStorage.setItem("dark", true)
-  document.getElementById('colors').href='../components/dark/css/colors.css'
-  document.getElementById('theme').href='../components/dark/css/theme.css'
-  document.getElementById('tools').href='../components/dark/css/tools.css'
-  document.getElementById('cards').href='../components/dark/css/cards.css'
-  document.getElementById('grid').href='../components/dark/css/grid.css'
-  document.getElementById('terminal').href='../components/dark/css/terminal.css'
+  document.getElementById('colors').href='../components/dark/css/dark.css'
+  document.getElementById('tools').href='../components/dark/css/dark-swt.css'
+  setTimeout(500);
 }
 function light() {
+  setTimeout(500);
   localStorage.setItem("dark", false)
-  document.getElementById('colors').href='../components/light/css/colors.css'
-  document.getElementById('theme').href='../components/light/css/theme.css'
-  document.getElementById('tools').href='../components/light/css/tools.css'
-  document.getElementById('cards').href='../components/light/css/cards.css'
-  document.getElementById('grid').href='../components/light/css/grid.css'
-  document.getElementById('terminal').href='../components/light/css/terminal.css'
+  document.getElementById('colors').href='../components/light/css/light.css'
+  document.getElementById('tools').href='../components/light/css/light-swt.css'
 }
 window.onload = function() {
   const dark = localStorage.getItem("dark")

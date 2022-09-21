@@ -1,0 +1,15 @@
+:root {
+  --primary: #9B51E0;
+  --primary-5: #9B51E080;
+  --primary-8: #9B51E0cc;
+  --primary-gradient: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
+  --secondary: #3081ED;
+  --text: #FFFFFF;
+  --text-e: #131313;
+  --text-a: #363636;
+  --text-7: #7b7b7e;
+  --background: #FFFFFF;
+  --background-gradient: linear-gradient(to left top, #FFFFFF, #f3f3f3, #ebebeb, #e0e0e0, rgb(219, 219, 219));
+  --background-secondary: #e1e1e6;
+  --background-secondary-gradient: linear-gradient(to right top, #212124, #252528, #29292c, #2d2d30, #313134);
+}
