@@ -1,17 +1,13 @@
 /* Theme */
 function dark() {
   localStorage.setItem("dark", true)
-  document.getElementById('theme').href='../../components/dark/css/theme.css'
-  document.getElementById('projects').href='../../components/dark/css/projects.css'
-  document.getElementById('tools').href='../../components/dark/css/tools.css'
-  document.getElementById('grid').href='../../components/dark/css/grid.css'
+  document.getElementById('colors').href='../components/css/dark.css'
+  document.getElementById('tools').href='../components/css/dark-swt.css'
 }
 function light() {
   localStorage.setItem("dark", false)
-  document.getElementById('theme').href='../../components/light/css/theme.css'
-  document.getElementById('projects').href='../../components/light/css/projects.css'
-  document.getElementById('tools').href='../../components/light/css/tools.css'
-  document.getElementById('grid').href='../../components/light/css/grid.css'
+  document.getElementById('colors').href='../components/css/light.css'
+  document.getElementById('tools').href='../components/css/light-swt.css'
 }
 window.onload = function() {
   const dark = localStorage.getItem("dark")

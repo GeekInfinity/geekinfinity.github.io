@@ -1,15 +1,13 @@
 /* Theme */
 function dark() {
   localStorage.setItem("dark", true)
-  document.getElementById('colors').href='../components/dark/css/dark.css'
-  document.getElementById('tools').href='../components/dark/css/dark-swt.css'
-  setTimeout(500);
+  document.getElementById('colors').href='../components/css/dark.css'
+  document.getElementById('tools').href='../components/css/dark-swt.css'
 }
 function light() {
-  setTimeout(500);
   localStorage.setItem("dark", false)
-  document.getElementById('colors').href='../components/light/css/light.css'
-  document.getElementById('tools').href='../components/light/css/light-swt.css'
+  document.getElementById('colors').href='../components/css/light.css'
+  document.getElementById('tools').href='../components/css/light-swt.css'
 }
 window.onload = function() {
   const dark = localStorage.getItem("dark")
