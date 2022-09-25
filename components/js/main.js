@@ -1,4 +1,4 @@
-/* Theme */
+// Theme
 function dark() {
   localStorage.setItem("dark", true)
   document.getElementById('colors').href='../components/css/dark.css'
@@ -19,7 +19,7 @@ window.onload = function() {
   }
 }
 
-/* Button */
+// Button
 const navButtonContainer = document.querySelector(".nav-btn-container");
 const navOverlay = document.querySelector(".overlay");
 
@@ -28,7 +28,7 @@ navButtonContainer.addEventListener("click", () => {
   navOverlay.classList.toggle("show");
 });
 
-/* Code */
+// Code
 $.fn.typewriter = function() {
   this.each(function() {
       var $ele = $(this), str = $ele.html(), progress = 0, offset = 0;

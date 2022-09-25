@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Gustavo Falcão">
-  <meta name="description" content="Portfolio of computer engineering student and full-stack developer of web and mobile applications">
-  <meta name="keywords" content="development, developer, programmer, software, web, website, wordpress, mobile, designer, design, ui, ux, project, windows, linux, macos, android, ios">
-  <title>Gustavo Falcão - Software Engineer & Full-Stack Developer</title>
+  <meta name="author" content="Geek Infinity">
+  <meta name="description" content="Portfólio de estudante em engenharia informática e desenvolvedor full-stack de aplicações web e mobile">
+  <meta name="keywords" content="development, desenvolvimento, developer, densenvolvedor, programmer, programador, software, programa, web, site, wordpress, mobile, celular, designer, design, ui, ux, project, projeto, windows, linux, macos, android, ios">
+  <title>Geek Infinity - Software Engineer & Full-Stack Developer</title>
+  <link href="../components/css/en.css" rel="stylesheet" type="text/css"/>
+  <link id="colors" href="../components/css/dark.css" rel="stylesheet" type="text/css"/>
   <link id="theme" href="../components/css/theme.css" rel="stylesheet" type="text/css"/>
   <link href="../components/css/responsive.css" rel="stylesheet" type="text/css">
   <link href="../components/css/hamburger.css" rel="stylesheet" type="text/css">
@@ -15,26 +17,35 @@
   <link id="terminal" href="../components/css/terminal.css" rel="stylesheet" type="text/css">
   <link href="../components/scss/laptop.css" rel="stylesheet" type="text/css">
   <link id="grid" href="../components/css/grid.css" rel="stylesheet" type="text/css">
-  <link id="tools" href="../components/css/tools.css" rel="stylesheet" type="text/css">
+  <link id="tools" href="../components/css/dark-swt.css" rel="stylesheet" type="text/css">
+  <link href="../components/scss/code.css" rel="stylesheet" type="text/css">
   <link rel='stylesheet' href="https://css.gg/css">
   <link rel="icon" href="../favicon.png" type="image/gif">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 </head>
 <body>
+  <div class="bg"></div>
   <header>
     <div class="webHeader">
       <div class="headerLogo">
-        <a href="../index.html">
-          <svg width="210px" height="110px" viewBox="0 0 187.3 93.7" preserveAspectRatio="xMidYMid meet" style="margin-left: -200px; margin-right: -50px">
-            <path stroke="#4DBD33" id="outline" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
-            <path id="outline-bg" opacity="0.05" fill="none" stroke="transparente" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" 
-            d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
-          </svg>
-          <h2>Gustavo Falcão</h2>
+        <a class="logo" href="../index.html">
+          GEEK INFINITY
+          <!--<img class="logo" src="../assets/img/Infinity Logo/3x/Asset 1xxhdpi.png" alt="Geek Infinity Logo" width="70px"> -->
         </a>
       </div>
       <div class="headerButton">
-        <a href="#contact">SAY HELLO</a>
+        <a class="helloBtn" href="#contact">DIGA OLÁ</a>
+        <div class="tools">
+          <div class="language">
+            <a class="languageBtn" href="../pt">PT</a>
+          </div>
+          <div id="dark" onclick="dark()" class="themeButton">
+            <i class="gg-linear"></i>
+          </div>
+          <div id="light" onclick="light()" class="themeButton">
+            <i class="gg-live-photo"></i>
+          </div>
+        </div>
       </div>
     </div>
     <div class="mobileHeader">
@@ -45,7 +56,7 @@
             <path id="outline-bg" opacity="0.05" fill="none" stroke="transparente" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" 
             d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
           </svg>
-          <h2>Gustavo Falcão</h2>
+          <h2>Geek Infinity</h2>
         </a>
       </div>
       <div class="hamburger">
@@ -57,86 +68,107 @@
           </div>
           <div class="overlay">
             <ul>
-              <li><a href="#contact">SAY HELLO</a></li>
+              <li><a href="#contact">DIGA OLÁ</a></li>
             </ul>
           </div>
         </nav>
       </div>
     </div>
-    <div class="tools">
-      <div class="languageButton">
-        <a href="../pt">PT</a>
-      </div>
-      <a id="dark" onclick="dark()" class="themeButton">
-        <i class="gg-moon"></i>
-      </a>
-      <a id="light" onclick="light()" class="themeButton">
-        <i class="gg-sun"></i>
-      </a>
-    </div>
   </header>
   <main>
-    <div class="mainTitle">
-      <h1>Software Engineer & Full-Stack Developer</h1>
-    </div>
-    <div class="mainSubTitle">
-      <h2>How do I turn <del>Problems</del> into <u>Knowledge</u></h2>
-      <a href="#about">MORE</a>
-    </div>
-    <div class="mainImg">
-      <div class="desk">
-        <div class="laptop">
-          <div class="screen">
-            <div class="terminal">
-              <div class=terminalMenu>
-                <div class="terminalBtn closeBtn"></div>
-                <div class="terminalBtn minimizeBtn"></div>
-                <div class="terminalBtn zoomBtn"></div>
-              </div>
-              <div class="terminalScreen">
-                <div id="code">
-                  <span class="codeBoot">
-                  ============ BOOTING UP ============
-                  </span>
-                  Loading...
-                  [OK]
-                  <span class="codeClear"></span>
-                  <span class="codeHighlight">&#10003;&nbsp;&nbsp;</span>Compiled!
-                    <span class="codeClear"></span>
-                  My name is <span class="codeHighlight">Gustavo Falcão &#9996;</span><br>
-                    I'm a Software Engineer student from [<a href="https://www.islagaia.pt/pt/" target="_blank">ISLA</a>]<br>
-                  <br>
-                  Here, let me talk a little about myself <span class="codeHighlight">&#9786;</span><br>
-                  <br>
-                  So, if you're new here, don't leave yet...<br>
-                  Scroll down and discover more <span class="codeHighlight">&#9759;</span>
-                </div> 
-              </div>
-            </div>
-          </div>
-          <div class="base"></div>
+    <div id="topPage">
+      <div class="mainContent">
+        <div class="mainTitle">
+          <h1>Desenvolvimento Web, Mobile e Software & <br>Designer UI/UX</h1>
+        </div>
+        <div class="mainSubTitle">
+          <h2>Na <span>GEEK INFINITY</span> você encontra, os melhores especialistas em desenvolvimento de Software, Web e Mobile, e os designers mais criativos</h2>
+          <a class="moreBtn" href="#about">MAIS</a>
         </div>
       </div>
-    </div>
-    <div id="about">
-      <div class="aboutContent">
-        <h2>ABOUT</h2>
-        <p>	
-          &nbsp;&nbsp;&nbsp;&nbsp;Hi, my name is Gustavo Falcão, I'm 26 years old, and I was born in Pernambuco, Brazil. I am a Full-Stack Developer and self-taught student, studying Computer Engineering, in the city of Porto - Portugal, where I currently live. I like to use my free time looking for information about new technologies, scientific facts and working on projects.
-          <br>
-          <br>
-          &nbsp;&nbsp;&nbsp;&nbsp;After starting my professional life in the Electronics area, I chose to dedicate myself to the maintenance of Computers and Smartphones/Tablets, where I improved my skills with soldering and maintenance of electronic components. I quickly developed a taste for solving Windows and Android software problems, which greatly improved my knowledge of these systems, it also led me to get to know Linux-based system distributions, with all their development and customization power. I started using Debian, where I learned a lot about its terminal, soon I was automating small tasks in Shell Script and getting to know other Linux distributions. So I started to study web and mobile development in a self-taught way and this was my entry into development, which soon brought me other curiosities and needs that led me to my academic path.
-          <br>
-          <br>
-          &nbsp;&nbsp;&nbsp;&nbsp;Currently, I have knowledge in several technologies and Development and Designer tools, mainly HTML, CSS, JavaScript, NodeJS, ReactJS, UI/UX, Figma, Photoshop, Illustrator, CorelDRAW and GIMP. Also, I worked with several other languages and tools in small projects. My academic trajectory allowed me to learn several languages, tools and skills, such as C++, C#, Java, SQL, Python and managing Windows and Linux servers.
-          <br>
-          <br>
-          &nbsp;&nbsp;&nbsp;&nbsp;With the end of my course, in Networks and Computer Systems, I soon started my academic trajectory in Computer Engineering, dedicating my free time to self-taught studies in web and mobile development. I like to seek new knowledge and apply this knowledge in my projects, in which I try to be as objective as possible, with characteristics of my daily life and with a modern and easy look. Working on these projects I run into real problems and solving those problems is the most important part of my way of learning. because, this is the process of “How I turn <del>Problems</del> into <u>Knowledge</u >”.
-        </p>
+      <div class="mainImg">
+        <!--<img src="../assets/img/undraw_static_website_re_x70h.svg" alt="">
+        <div class="illustration-editor">
+          <div class="code-blocks">
+            <div class="code code-html">
+              <header>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.9999 6.675L13.1999 6.075C12.9999 5.975 12.8999 5.775 12.9999 5.675L13.8999 3.975C14.4999 2.775 13.1999 1.475 11.9999 2.075L10.2999 2.975C10.1999 3.075 9.9999 2.975 9.8999 2.775L9.2999 0.975C8.8999 -0.325 7.0999 -0.325 6.6999 0.975L6.0999 2.775C5.9999 2.975 5.7999 3.075 5.6999 2.975L3.9999 2.075C2.7999 1.475 1.4999 2.775 2.0999 3.975L2.9999 5.675C3.0999 5.775 2.9999 5.975 2.7999 6.075L0.999902 6.675C-0.300098 7.075 -0.300098 8.975 0.999902 9.375L2.7999 9.975C2.9999 9.975 3.0999 10.175 2.9999 10.275L2.0999 11.975C1.4999 13.175 2.7999 14.475 3.9999 13.875L5.6999 12.975C5.8999 12.875 6.0999 12.975 6.0999 13.175L6.6999 14.975C7.0999 16.275 8.9999 16.275 9.3999 14.975L9.9999 13.175C10.0999 12.975 10.2999 12.875 10.3999 12.975L12.0999 13.875C13.2999 14.475 14.5999 13.175 13.9999 11.975L12.9999 10.275C12.8999 10.075 12.9999 9.875 13.1999 9.875L14.9999 9.275C16.2999 8.875 16.2999 7.075 14.9999 6.675ZM7.9999 10.375C6.6999 10.375 5.5999 9.275 5.5999 7.975C5.5999 6.675 6.6999 5.575 7.9999 5.575C9.2999 5.575 10.3999 6.675 10.3999 7.975C10.3999 9.275 9.2999 10.375 7.9999 10.375Z" fill="#4C4F5A"/></svg>
+        <h1>HTML</h1>
+                <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.7089 7.65105L14.8704 2.02908C15.1112 1.80937 15.2528 1.51212 15.2528 1.18902C15.2528 0.865913 15.1112 0.56866 14.8704 0.348951C14.6296 0.129241 14.3038 0 13.9497 0C13.5956 0 13.2698 0.129241 13.029 0.348951L7.75989 5.1567L2.49077 0.348951C2.24998 0.129241 1.9242 0 1.57009 0C1.21598 0 0.890202 0.129241 0.649409 0.336026C0.380287 0.568659 0.252808 0.878837 0.252808 1.18902C0.252808 1.48627 0.380286 1.78352 0.621079 2.02908C2.23581 3.51535 6.42844 7.3538 6.71173 7.6252L6.74006 7.65105C7.24998 8.11632 8.19898 8.11632 8.7089 7.65105Z" fill="#4C4F5A"/></svg>
+              </header>
+              <div class="code-content">
+                <code>
+                  <span class="c-r">&lt;div</span> <span class="c-y">class</span><span class="c-w">=</span><span class="c-g">"rect"</span><span class="c-r">&gt;&lt;/div&gt;</span></div>
+                </code>
+              </div>
+            </div>
+            <div class="code code-css">
+              <header>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.9999 6.675L13.1999 6.075C12.9999 5.975 12.8999 5.775 12.9999 5.675L13.8999 3.975C14.4999 2.775 13.1999 1.475 11.9999 2.075L10.2999 2.975C10.1999 3.075 9.9999 2.975 9.8999 2.775L9.2999 0.975C8.8999 -0.325 7.0999 -0.325 6.6999 0.975L6.0999 2.775C5.9999 2.975 5.7999 3.075 5.6999 2.975L3.9999 2.075C2.7999 1.475 1.4999 2.775 2.0999 3.975L2.9999 5.675C3.0999 5.775 2.9999 5.975 2.7999 6.075L0.999902 6.675C-0.300098 7.075 -0.300098 8.975 0.999902 9.375L2.7999 9.975C2.9999 9.975 3.0999 10.175 2.9999 10.275L2.0999 11.975C1.4999 13.175 2.7999 14.475 3.9999 13.875L5.6999 12.975C5.8999 12.875 6.0999 12.975 6.0999 13.175L6.6999 14.975C7.0999 16.275 8.9999 16.275 9.3999 14.975L9.9999 13.175C10.0999 12.975 10.2999 12.875 10.3999 12.975L12.0999 13.875C13.2999 14.475 14.5999 13.175 13.9999 11.975L12.9999 10.275C12.8999 10.075 12.9999 9.875 13.1999 9.875L14.9999 9.275C16.2999 8.875 16.2999 7.075 14.9999 6.675ZM7.9999 10.375C6.6999 10.375 5.5999 9.275 5.5999 7.975C5.5999 6.675 6.6999 5.575 7.9999 5.575C9.2999 5.575 10.3999 6.675 10.3999 7.975C10.3999 9.275 9.2999 10.375 7.9999 10.375Z" fill="#4C4F5A"/></svg>
+        <h1>CSS</h1>
+                <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.7089 7.65105L14.8704 2.02908C15.1112 1.80937 15.2528 1.51212 15.2528 1.18902C15.2528 0.865913 15.1112 0.56866 14.8704 0.348951C14.6296 0.129241 14.3038 0 13.9497 0C13.5956 0 13.2698 0.129241 13.029 0.348951L7.75989 5.1567L2.49077 0.348951C2.24998 0.129241 1.9242 0 1.57009 0C1.21598 0 0.890202 0.129241 0.649409 0.336026C0.380287 0.568659 0.252808 0.878837 0.252808 1.18902C0.252808 1.48627 0.380286 1.78352 0.621079 2.02908C2.23581 3.51535 6.42844 7.3538 6.71173 7.6252L6.74006 7.65105C7.24998 8.11632 8.19898 8.11632 8.7089 7.65105Z" fill="#4C4F5A"/></svg>
+              </header>
+              <div class="code-content">
+                <code>
+                  <p class="line-1"><span class="c-y">.rect</span> <span>{</span></p><br/><p class="line-2"><span class="c-p">background</span><span>:</span> <span class="c-y">linear-gradient</span>( </p><br/><p class="line-3"><span class="c-o">-119deg</span>,</p><br/><p class="line-4"><span class="c-y">$gray</span> <span class="c-o">0%</span>,</p><br/><p class="line-5"><span class="c-y">$dark-gray</span> <span class="c-o">100%</span>);}</p>
+                </code>
+              </div>
+            </div>
+            <div class="code code-js">
+              <header>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.9999 6.675L13.1999 6.075C12.9999 5.975 12.8999 5.775 12.9999 5.675L13.8999 3.975C14.4999 2.775 13.1999 1.475 11.9999 2.075L10.2999 2.975C10.1999 3.075 9.9999 2.975 9.8999 2.775L9.2999 0.975C8.8999 -0.325 7.0999 -0.325 6.6999 0.975L6.0999 2.775C5.9999 2.975 5.7999 3.075 5.6999 2.975L3.9999 2.075C2.7999 1.475 1.4999 2.775 2.0999 3.975L2.9999 5.675C3.0999 5.775 2.9999 5.975 2.7999 6.075L0.999902 6.675C-0.300098 7.075 -0.300098 8.975 0.999902 9.375L2.7999 9.975C2.9999 9.975 3.0999 10.175 2.9999 10.275L2.0999 11.975C1.4999 13.175 2.7999 14.475 3.9999 13.875L5.6999 12.975C5.8999 12.875 6.0999 12.975 6.0999 13.175L6.6999 14.975C7.0999 16.275 8.9999 16.275 9.3999 14.975L9.9999 13.175C10.0999 12.975 10.2999 12.875 10.3999 12.975L12.0999 13.875C13.2999 14.475 14.5999 13.175 13.9999 11.975L12.9999 10.275C12.8999 10.075 12.9999 9.875 13.1999 9.875L14.9999 9.275C16.2999 8.875 16.2999 7.075 14.9999 6.675ZM7.9999 10.375C6.6999 10.375 5.5999 9.275 5.5999 7.975C5.5999 6.675 6.6999 5.575 7.9999 5.575C9.2999 5.575 10.3999 6.675 10.3999 7.975C10.3999 9.275 9.2999 10.375 7.9999 10.375Z" fill="#4C4F5A"/></svg>
+        <h1>JS</h1>
+                <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.7089 7.65105L14.8704 2.02908C15.1112 1.80937 15.2528 1.51212 15.2528 1.18902C15.2528 0.865913 15.1112 0.56866 14.8704 0.348951C14.6296 0.129241 14.3038 0 13.9497 0C13.5956 0 13.2698 0.129241 13.029 0.348951L7.75989 5.1567L2.49077 0.348951C2.24998 0.129241 1.9242 0 1.57009 0C1.21598 0 0.890202 0.129241 0.649409 0.336026C0.380287 0.568659 0.252808 0.878837 0.252808 1.18902C0.252808 1.48627 0.380286 1.78352 0.621079 2.02908C2.23581 3.51535 6.42844 7.3538 6.71173 7.6252L6.74006 7.65105C7.24998 8.11632 8.19898 8.11632 8.7089 7.65105Z" fill="#4C4F5A"/></svg>
+              </header>
+              <div class="code-content">
+                <code>
+                  <span class="c-y">var</span> <span class="c-b">colors</span> = [<span class="c-g">“#74B087”</span>, <span class="c-g">“#DE7300”</span>, <span class="c-g">“#74B087”</span>];<br/><br/>
+                  <span class="c-c">// Do the thing</span><br/>
+                  <span class="c-y">function</span> <span class="c-b">animate</span>() {}
+                </code>
+            </div>
+          </div>
+        </div>-->
+        <div class="artContainer">
+          <div class="mainbar">
+            <div class="buttons A"></div>
+            <div class="buttons B"></div>
+            <div class="buttons C"></div>
+          </div>
+          <div class="sidebar">
+            <div class="artLogo"></div>
+            <div class="lines">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+          <div class="artImages">
+            <ul>
+              <li><img src="" alt="" /></li>
+              <li><img src="" alt="" /></li>
+              <li><img src="" alt="" /></li>
+              <li><img src="" alt="" /></li>
+              <li><img src="" alt="" /></li>
+              <li><img src="" alt="" /></li>
+              <li><img src="" alt="" /></li>
+              <li><img src="" alt="" /></li>
+              <li><img src="" alt="" /></li>
+              <li><img src="" alt="" /></li>
+              <li><img src="" alt="" /></li>
+              <li><img src="" alt="" /></li>
+              <li><img src="" alt="" /></li>
+              <li><img src="" alt="" /></li>
+              <li><img src="" alt="" /></li>
+            </ul>
+          </div>
+        </div> 
       </div>
     </div>
     <div id="service">
-      <h2>SKILLS</h2>
+      <h2>HABILIDADES</h2>
       <div class="serviceContainer">
         <div class="card">
           <div class="face face1">
@@ -153,7 +185,7 @@
                 - HTML <br>
                 - CSS <br>
                 - JavaScript <br>
-                - Wordpress
+                - ReactJS
               </p>
             </div>
           </div>
@@ -193,7 +225,7 @@
                 - React Native <br>
                 - Flutter <br>
                 - Java <br>
-                - Swift
+                - Kotlin
               </p>
             </div>
           </div>
@@ -225,24 +257,24 @@
       <div class="partnerContent">
         <h2>PARCEIROS</h2>
         <div class="partnerCompanys">
-          <img src="assets/img/companys/islagaia.png" alt="ISLAGaia" width="140px" height="70px">
-          <img src="assets/img/companys/lusofona.png" alt="Lusofona" width="280px" height="100px">
-          <img src="assets/img/companys/moreira.png" alt="Moreira" width="160px" height="55px">
-          <img src="assets/img/companys/google.png" alt="Google" width="160px">
-          <img src="assets/img/companys/microsoft.png" alt="Microsoft" width="180px">
+          <img src="../assets/img/companys/islagaia.png" alt="ISLAGaia" width="110px">
+          <img src="../assets/img/companys/lusofona.png" alt="Lusofona" width="160px">
+          <img src="../assets/img/companys/moreira.png" alt="Moreira" width="120px">
+          <img src="../assets/img/companys/google.png" alt="Google" width="120px">
+          <img src="../assets/img/companys/microsoft.png" alt="Microsoft" width="160px">
         </div>
       </div>
     </div>
     -->
     <div id="project">
       <div class="webProjects">
-        <h2>PROJECTS</h2>
+        <h2>PROJETOS</h2>
         <section class="cardboards-wrapper">
           <div class="cardboard-grid-space">
             <div class="cardboard" target="_blank" style="background-image: url(../assets/img/projects/webp/geeksmart-thumb.webp)">
               <div class="projectContainer">
                 <h1>GEEK SMART</h1>
-                <p>Business Registration Program for Windows</p>
+                <p>Programa gestão para Windows</p>
                 <div class="date">2018</div>
                 <div class="tags">
                   <div class="tag">DESKTOP</div>
@@ -250,7 +282,7 @@
                   <div class="tag">C#</div>
                   <div class="tag">VB</div>
                 </div>
-                <a class="projectButton" href="projects/1.html">VIEW MORE</a>
+                <a class="projectButton" href="projects/1.html">VER MAIS</a>
               </div>
             </div>
           </div>
@@ -258,7 +290,7 @@
             <div class="cardboard" target="_blank" style="background-image: url(../assets/img/projects/webp/aircnc-thumb.webp)">
               <div class="projectContainer">
                 <h1>AIRCNC</h1>
-                <p>Spot application for programmers</p>
+                <p>Aplicativo de locais para programadores</p>
                 <div class="date">2019</div>
                 <div class="tags">
                   <div class="tag">WEB</div>
@@ -267,7 +299,7 @@
                   <div class="tag">REACT</div>
                   <div class="tag">NODE</div>
                 </div>
-                <a class="projectButton" href="projects/2.html">VIEW MORE</a>
+                <a class="projectButton" href="projects/2.html">VER MAIS</a>
               </div>
             </div>
           </div>
@@ -275,7 +307,7 @@
             <div class="cardboard" target="_blank" style="background-image: url(../assets/img/projects/webp/onpnp-thumb.webp)">
               <div class="projectContainer">
                 <h1>ONPNP</h1>
-                <p>Application for Projects and Programmers</p>
+                <p>Aplicativo para Projetos e Programadores</p>
                 <div class="date">2020</div>
                 <div class="tags">
                   <div class="tag">WEB</div>
@@ -284,7 +316,7 @@
                   <div class="tag">JS</div>
                   <div class="tag">REACT</div>
                 </div>
-                <a class="projectButton" href="projects/3.html">VIEW MORE</a>
+                <a class="projectButton" href="projects/3.html">VER MAIS</a>
               </div>
             </div>
           </div>
@@ -292,7 +324,7 @@
             <div class="cardboard" target="_blank" style="background-image: url(../assets/img/projects/webp/geekfy-thumb.webp)">
               <div class="projectContainer">
                 <h1>GEEKFY</h1>
-                <p>Application for Cards Tasks</p>
+                <p>Aplicativo para Tarefas em forma de Cartões</p>
                 <div class="date">2021</div>
                 <div class="tags">
                   <div class="tag">WEB</div>
@@ -300,7 +332,7 @@
                   <div class="tag">JS</div>
                   <div class="tag">REACT</div>
                 </div>
-                <a class="projectButton" href="projects/4.html">VIEW MORE</a>
+                <a class="projectButton" href="projects/4.html">VER MAIS</a>
               </div>
             </div>
           </div>
@@ -308,7 +340,7 @@
             <div class="cardboard" target="_blank" style="background-image: url(../assets/img/projects/webp/tasks-thumb.webp)">
               <div class="projectContainer">
                 <h1>TASKS</h1>
-                <p>Mobile Tasks Application</p>
+                <p>Aplicativo para Tarefas Mobile</p>
                 <div class="date">2021</div>
                 <div class="tags">
                   <div class="tag">MOBILE</div>
@@ -317,7 +349,7 @@
                   <div class="tag">JS</div>
                   <div class="tag">REACT</div>
                 </div>
-                <a class="projectButton" href="projects/5.html">VIEW MORE</a>
+                <a class="projectButton" href="projects/5.html">VER MAIS</a>
               </div>
             </div>
           </div>
@@ -325,7 +357,7 @@
             <div class="cardboard" target="_blank" style="background-image: url(../assets/img/projects/webp/gamesocial-thumb.webp)">
               <div class="projectContainer">
                 <h1>GAMESOCIAL</h1>
-                <p>Social Network Focused on Gaming Audience</p>
+                <p>Rede Social focada no público Gaming</p>
                 <div class="date">2022</div>
                 <div class="tags">
                   <div class="tag">MOBILE</div>
@@ -334,7 +366,7 @@
                   <div class="tag">JS</div>
                   <div class="tag">REACT</div>
                 </div>
-                <a class="projectButton" href="projects/6.html">VIEW MORE</a>
+                <a class="projectButton" href="projects/6.html">VER MAIS</a>
               </div>
             </div>
           </div>
@@ -342,7 +374,7 @@
             <div class="cardboard" target="_blank" style="background-image: url(../assets/img/projects/webp/velhomundo-thumb.webp)">
               <div class="projectContainer">
                 <h1>VELHO MUNDO</h1>
-                <p>Wine restaurant static page</p>
+                <p>Página estatica de restaurante com foco em vinho</p>
                 <div class="date">2022</div>
                 <div class="tags">
                   <div class="tag">WEB</div>
@@ -351,7 +383,7 @@
                   <div class="tag">HTML</div>
                   <div class="tag">CSS</div>
                 </div>
-                <a class="projectButton" target="_blank" href="../velhomundo/">VIEW MORE</a>
+                <a class="projectButton" target="_blank" href="../velhomundo/">VER MAIS</a>
               </div>
             </div>
           </div>
@@ -359,7 +391,7 @@
             <div class="cardboard" target="_blank" style="background-image: url(../assets/img/projects/webp/companheirosparasempre-thumb.webp)">
               <div class="projectContainer">
                 <h1>COMPANHEIROS PARA SEMPRE</h1>
-                <p>Static page of services for animals</p>
+                <p>Página estática de serviços para animais</p>
                 <div class="date">2022</div>
                 <div class="tags">
                   <div class="tag">WEB</div>
@@ -368,7 +400,7 @@
                   <div class="tag">HTML</div>
                   <div class="tag">CSS</div>
                 </div>
-                <a class="projectButton" target="_blank" href="../companheirosparasempre/">VIEW MORE</a>
+                <a class="projectButton" target="_blank" href="../companheirosparasempre/">VER MAIS</a>
               </div>
             </div>
           </div>
@@ -378,26 +410,26 @@
     <div id="contact">
       <div class="webContact">
         <div class="contactBody">
-          <h2>SAY HELLO</h2>
+          <h2>DIGA OLÁ</h2>
           <form action="https://formsubmit.co/gustavo.falcao01@gmail.com" method="POST" target="_blank">
               <div class="formfield">
                 <div class="col">
                   <div class="input-holder">
-                    <input type="text" name="name" class="text" id="your-name" placeholder="YOUR NAME">
+                    <input type="text" name="name" class="text" id="your-name" placeholder="SEU NOME">
                   </div>
                 </div>
               <div class="col second">
                 <div class="input-holder">
-                  <input type="email" name="email" class="text" id="your-email" placeholder="YOUR EMAIL">
+                  <input type="email" name="email" class="text" id="your-email" placeholder="SEU E-MAIL">
                 </div>
               </div>
             </div>
             <div class="formfield">
               <div class="input-holder">
-                <textarea name="message" id="message" placeholder="YOUR MESSAGE"></textarea>
+                <textarea name="message" id="message" placeholder="SUA MENSAGEM"></textarea>
               </div>
             </div>
-            <input class="contactSend" type="submit" value="SEND MESSAGE">
+            <input class="contactSend" type="submit" value="ENVIAR MENSAGEM">
           </form>
         </div>
       </div>
@@ -429,7 +461,7 @@
     </div>
     </div>
     <div class="footerAuthor">
-      <h4>Copyright © 2022 - Gustavo Falcão</h4>
+      <h4>Copyright © 2022 - Geek Infinity</h4>
     </div>
   </footer>
   <script src="../components/js/main.js"></script>

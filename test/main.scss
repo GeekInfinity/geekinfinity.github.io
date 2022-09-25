@@ -1,135 +1,3 @@
-.illustration-editor {
-  display: grid;
-  grid-template-rows: 24px auto;
-  justify-items: center;
-  position: relative;
-  margin-top: -150px;
-  margin-right: 25%;
-}
-
-.code {
-  position: relative;
-  width: 320px;
-  height: 200px;
-  background: #1D1E22;
-  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
-  border-radius: 6px;
-  z-index: 5;
-  header {
-    display: grid;
-    grid-template-columns: 36px auto 36px;
-    align-items: center;
-    
-    svg {
-      margin: 10px;
-    }
-    h1 {
-      font-family: Lato, sans-serif;
-      font-weight: 900;
-      font-size: 14px;
-      letter-spacing: 1.57px;
-      color: #C5C8D4;
-      margin: 0;
-    }
-  }
-  &-html {
-    left: 0px;
-    top: -30px;
-  }
-  &-css {
-    left: 45px;
-    top: 160px;
-  }
-  &-js {
-    left: -10px;
-    top: 140px;
-  }
-  .code-content {
-    margin: 40px 10px 10px 10px;
-    color: white;
-    .c-r { color: #A88038 }
-    .c-o { color: #DE7300 }
-    .c-y { color: #E1CA72 }
-    .c-g { color: #74B087 }
-    .c-p { color: #9F8198 }
-    .c-b { color: #7A99AD }
-    .c-c { color: #666666 }
-  }
-  &-css {
-    .code-content code {
-      .line {
-        @for $i from 1 through 5 {
-          &-#{$i} {
-            width: 0%;
-            margin: 0;
-            border-right: .15em solid transparent;
-            overflow: hidden;
-            display: inline-block;
-            white-space: nowrap;
-          }
-        }
-        @for $i from 1 through 4 {
-          &-#{$i} {
-            animation:
-              typing-#{$i} 3s unquote((($i - 1) * 3) + 's') steps(30, end) forwards,
-              cursor 1s linear unquote((($i - 1) * 3) + 's') 3;
-          }
-        }
-        &-1, &-3, &-4 {
-          animation-duration: 1s;
-          animation-timing-function: steps(10, end);
-        }
-        &-5 {
-          border-color: transparent;
-          animation:
-            typing-5 3s 12s steps(30, end) forwards,
-            cursor-persist 1s linear 12s infinite;
-        }
-        &-2 {
-          margin-left: 2rem;
-        }
-        &-3, &-4, &-5 {
-          margin-left: 4rem;
-        }
-      }
-    }
-  }
-}
-
-@keyframes typing-1 {
-  from { width: 0 }
-  to { width: 60px }
-}
-@keyframes typing-2 {
-  from { width: 0 }
-  to { width: 220px }
-}
-@keyframes typing-3 {
-  from { width: 0 }
-  to { width: 70px }
-}
-@keyframes typing-4 {
-  from { width: 0 }
-  to { width: 75px }
-}
-@keyframes typing-5 {
-  from { width: 0 }
-  to { width: 141px }
-}
-
-
-@keyframes cursor {
-  from, to, 20%, 80% { border-color: transparent }
-  25%, 75% { border-color: white }
-}
-
-@keyframes cursor-persist {
-  from, 45% { border-color: transparent }
-  50%, to { border-color: white }
-}
-
-// 
-
 $color-lightgray: rgb(233,234,238);
 $color-midgray: rgb(150,154,158);
 $color-gray: rgb(200,204,208);
@@ -145,10 +13,11 @@ $fastOut: cubic-bezier(0.05,0.2,0.0,0.95);
   background: $c;
   border-radius: 50%;
 }
-.artContainer {
+.container {
   position: relative;
+  margin: 0 auto;
   overflow: hidden;
-  transform: scale(1.1);
+  transform: scale(0.8);
 }
 .buttons {
   position: relative;
@@ -162,7 +31,7 @@ $fastOut: cubic-bezier(0.05,0.2,0.0,0.95);
   border-radius: 50%;
   background: rgba(255,255,255, 1.85);
   transform:scale(0);
-  animation: openartLogo 0.6s ease forwards;
+  animation: openLogo 0.6s ease forwards;
   transition: 0.1667s ease;
 }
 .A {  animation-delay: 3.8s; }
@@ -173,15 +42,16 @@ $fastOut: cubic-bezier(0.05,0.2,0.0,0.95);
 .C:hover  {  background: rgba(0,128,255,0.76); cursor: pointer;  }
 
 
-.artContainer {
+.container {
   position: relative;
   width:0px; 
   height: 0px;
+  margin: calc(50vh - 150px) auto;
   background: #121214;
   overflow: visible;
   border-radius: 8px;
-  box-shadow: 0px 10px 20px rgba(1, 14, 8, 0.7);
-  animation: openartContainer 0.8s $fastOut forwards;
+  box-shadow: 0px 66px 56px -48px rgba(0,0,0,0.10), -4px 10px 24px -4px rgba(0,0,0,0.12), 0px 8px 68px 20px rgba(0,128,255,0.03);
+  animation: openContainer 0.8s $fastOut forwards;
 }
 
 .mainbar {
@@ -200,7 +70,7 @@ $fastOut: cubic-bezier(0.05,0.2,0.0,0.95);
    border-radius: 0 0 0 8px;
   animation: openSidebar .55s 0.8s $bounceOut forwards;  
   
-  .artLogo { 
+  .logo { 
     @include circle(0px, 0px, $color-darkgray);
     position: absolute;
     top: 35px;
@@ -212,7 +82,7 @@ $fastOut: cubic-bezier(0.05,0.2,0.0,0.95);
       background-repeat: no-repeat;
     transform: scale(0.0);
     transform-origin: 50% 50%;
-    animation: openartLogo .55s 1s $bounceOut forwards;
+    animation: openLogo .55s 1s $bounceOut forwards;
    /* background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="500px" height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
 <g>
 	<path fill="#444" d="M258.144,342.999v-84.602h-19.725v65.153l-76.955-76.952h65.156v-84.594h11.799v84.594h19.725v-64.932   l76.729,76.73h-64.931v56.115l28.356-28.356l8.344,8.344L258.144,342.999z M189.95,258.397l36.67,36.669v-36.669H189.95z    M269.942,246.599h36.444l-36.444-36.445V246.599z"/>
@@ -246,12 +116,12 @@ $fastOut: cubic-bezier(0.05,0.2,0.0,0.95);
   }
 }
 
-.artImages li:hover {
+.images li:hover {
   background: white;
   box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.19);
 }
 
-@keyframes imgartContainer {
+@keyframes imgContainer {
   from {
     transform: translate(125px, 150px) scale(1.5);
   }
@@ -259,13 +129,13 @@ $fastOut: cubic-bezier(0.05,0.2,0.0,0.95);
     transform: translate(0px, 0px) scale(1);
   }
 }
-.artImages {
+.images {
   position: absolute;
   width: 450px;
   height: 300px;
   top:40px;
   left: 150px;
-  animation: imgartContainer 1.4s 2.6s cubic-bezier(.1,.32,0,1) forwards;
+  animation: imgContainer 1.4s 2.6s cubic-bezier(.1,.32,0,1) forwards;
   overflow: hidden;
   //display: none;
   ul {
@@ -291,17 +161,17 @@ $fastOut: cubic-bezier(0.05,0.2,0.0,0.95);
       transform-origin: 5px 5px;
       @for $i from 1 through 5 {
             &:nth-child(#{$i}) {
-              animation: openartImages 0.45s 2.5s+($i*.1) $bounceOut forwards;
+              animation: openImages 0.45s 2.5s+($i*.1) $bounceOut forwards;
             } 
       }
       @for $i from 6 through 10 {
             &:nth-child(#{$i}) {
-              animation: openartImages 0.45s 2.75s+(($i - 5) *.1) $bounceOut forwards;
+              animation: openImages 0.45s 2.75s+(($i - 5) *.1) $bounceOut forwards;
             } 
       }
       @for $i from 11 through 15 {
             &:nth-child(#{$i}) {
-              animation: openartImages 0.45s 3s+(($i - 10)*.1) $bounceOut forwards;
+              animation: openImages 0.45s 3s+(($i - 10)*.1) $bounceOut forwards;
             } 
       }
       &:after {
@@ -327,7 +197,7 @@ $fastOut: cubic-bezier(0.05,0.2,0.0,0.95);
   }
 }
 
-@keyframes openartContainer {
+@keyframes openContainer {
   50% {
     width: $contWidth;
     height: 1px;
@@ -350,7 +220,7 @@ $fastOut: cubic-bezier(0.05,0.2,0.0,0.95);
   }
 }
 
-@keyframes openartLogo {
+@keyframes openLogo {
   from {
     transform: scale(0.0);
   }
@@ -365,7 +235,7 @@ $fastOut: cubic-bezier(0.05,0.2,0.0,0.95);
   }
 }
 
-@keyframes openartImages {
+@keyframes openImages {
   from {
     opacity: 1;
 
@@ -385,7 +255,7 @@ $fastOut: cubic-bezier(0.05,0.2,0.0,0.95);
   and (max-width: 750px) 
    { 
 
-  artContainer {
+  container {
   background: none;
   overflow: hidden;
   transform: scale(0.333);
@@ -396,7 +266,7 @@ $fastOut: cubic-bezier(0.05,0.2,0.0,0.95);
   and (max-width: 960px) 
    { 
 
-  artContainer {
+  container {
   background: none;
   overflow: hidden;
   transform: scale(0.5);
